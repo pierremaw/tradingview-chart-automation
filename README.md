@@ -109,7 +109,7 @@ The core dependencies include:
 * `selenium`: For browser automation
 * `flask`: For building the API server
 * `python-dotenv`: For loading environment variables
-* `fake-useragent`: To spoof browser fingerprints
+* `fake-useragent`: To emulate browser fingerprints
 * `requests`: For API communication with Airtable
 
 ## Example Webhook Payload
