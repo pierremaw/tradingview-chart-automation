@@ -6,7 +6,7 @@ This project deepened my experience in full-stack Python development, including 
 
 ## Overview
 
-When triggered by an incoming webhook, the automation performs a sequence of actions:
+When triggered by an incoming webhook, the automation performs these actions:
 
 * Launches a Selenium browser session using a remote Selenium Grid.
 * Authenticates with TradingView using securely stored credentials.
