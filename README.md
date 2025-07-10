@@ -32,7 +32,7 @@ After capturing the chart snapshot, the service PATCHes the target record in Air
 
 ### Lightweight Flask Server
 
-The service is built on Flask and includes several endpoints for diagnostics and system health:
+The service is built on Flask and includes several endpoints for monitoring and system health:
 
 * `/webhook_airtable`: Accepts chart generation requests.
 * `/info`: Provides request metadata for debugging.
