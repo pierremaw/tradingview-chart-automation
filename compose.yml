@@ -1,0 +1,35 @@
+services:
+  selenium:
+    image: selenium/standalone-chrome:4.8.1-20230306
+    shm_size: 2g
+    ports:
+      - "4444:4444"
+      - "5900:5900"
+  nginx-proxy:
+    build: ./nginx
+    restart: always
+    volumes:
+      - ./nginx/default.conf:/tmp/default.conf
+    environment: 
+      - FLASK_SERVER_ADDR=flask-app:8000
+    ports:
+      - "80:80"
+    depends_on:
+      - flask-app
+    healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail localhost:80/health-check || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+    command: /app/start.sh
+  flask-app:
+    build: ./flask
+    restart: always
+    ports: 
+      - '8000:8000'
+    healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail localhost:8000/flask-health-check || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+    command: gunicorn -w 3 -t 3600 -b 0.0.0.0:8000 app:app
