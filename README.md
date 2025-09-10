@@ -1,5 +1,7 @@
 # TradingView Chart Automation
 
+https://github.com/user-attachments/assets/321e2867-62a3-4a82-b0f1-fda5469a7916
+
 **TradingView Chart Automation** is a Python-based automation that captures snapshots of charts from TradingView and updates records within an Airtable base automatically. 
 
 This project deepened my experience in full-stack Python development, including Flask APIs, Selenium-based web automation, and Dockerized deployment. It provided hands-on experience with environment configuration, secure authentication, and API-driven workflows. The automation runs on remote infrastructure using Docker, Flask, and Selenium.
