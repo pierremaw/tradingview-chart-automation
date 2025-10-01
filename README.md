@@ -2,7 +2,7 @@
 
 **TradingView Chart Automation** is a Python-based automation that captures snapshots of charts from TradingView and updates records within an Airtable base automatically. 
 
-This project deepened my experience in full-stack Python development, including Flask APIs, Selenium-based web automation, and Dockerized deployment. It provided hands-on experience with environment configuration, secure authentication, and API-driven workflows. The automation runs on remote infrastructure using Docker, Flask, and Selenium.
+This project deepened my experience in full-stack Python development, including Flask APIs, Selenium-based web automation, and Dockerised deployment. It provided hands-on experience with environment configuration, secure authentication, and API-driven workflows. The automation runs on remote infrastructure using Docker, Flask, and Selenium.
 
 ## Overview
 
@@ -63,7 +63,7 @@ These environment variables manage authentication and connectivity. Use `dotenv`
 
 ### `selenium_chart(asset_name)`
 
-This function initiates a Selenium browser session, logs into TradingView, opens the chart for the specified `asset_name`, captures a snapshot, and returns both the page URL and the image URL. It supports Selenium Grid and randomizes the user agent for robustness.
+This function initiates a Selenium browser session, logs into TradingView, opens the chart for the specified `asset_name`, captures a snapshot, and returns both the page URL and the image URL. It supports Selenium Grid and randomises the user agent for robustness.
 
 ### `airtable_api_request(api_url, data)`
 
